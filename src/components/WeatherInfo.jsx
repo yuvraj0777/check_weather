@@ -96,15 +96,17 @@ const WeatherInfo = () => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <button onClick={() => weatherData(city)}>
-          {loading ? "Loading..." : "Check Weather"}
-        </button>
-        <button onClick={getCurrentLocationWeather}>
-          📍 Use Current Location
-        </button>
-        <button onClick={toggleUnit}>
-          Switch to {unit === "metric" ? "Fahrenheit" : "Celsius"}
-        </button>
+        <div className="btn-containar">
+          <button onClick={() => weatherData(city)}>
+            {loading ? "Loading..." : "Check Weather"}
+          </button>
+          <button onClick={getCurrentLocationWeather}>
+            📍 Use Current Location
+          </button>
+          <button onClick={toggleUnit}>
+            Switch to {unit === "metric" ? "Fahrenheit" : "Celsius"}
+          </button>
+        </div>
       </div>
 
       {error && <div className="error">{error}</div>}
@@ -137,7 +139,7 @@ const WeatherInfo = () => {
             ))}
           </ul>
           <button onClick={() => setSearchHistory((prev) => prev.slice(0, -1))}>
-            Clear
+            Clear history
           </button>
         </div>
       )}

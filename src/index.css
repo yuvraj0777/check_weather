@@ -13,7 +13,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   min-height: 100vh;
   padding: 20px;
   background: linear-gradient(to bottom right, #1c1c1c, #444);
@@ -48,12 +47,13 @@ body {
   color: #000;
 }
 
-#city:focus {
+.city:focus {
   border-color: #ff9800;
 }
 
 .container button {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +88,6 @@ body {
 #newDiv h2 {
   font-size: 1.5rem;
   margin-bottom: 8px;
-  border: none;
   background-color: #ffe4b5;
   border-radius: 5px;
   padding: 8px;
@@ -104,28 +103,55 @@ body {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   body {
     padding: 5px;
+    min-height: 80vh; 
   }
+
   .container {
     padding: 10px;
+    gap: 8px;
+    max-width: 90%;
+    min-height: 60vh; 
   }
+
   .city {
-    padding: 5px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 6px;
   }
+
   .container button {
-    padding: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    margin-top: 10px;
   }
+
   #newDiv {
     padding: 10px;
+    margin-top: 10px;
   }
+
   #newDiv h2 {
-    font-size: 1.2rem;
-    padding: 5px;
+    font-size: 1rem;
+    padding: 6px;
+    margin-bottom: 5px;
   }
+
   #newDiv p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    font-size: 0.9rem;
   }
 }
