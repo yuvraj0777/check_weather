@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #1c1c1c, #444);
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background: #2e2e2e;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  gap: 10px;
+}
+
+.city {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #555;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #000;
+}
+
+#city:focus {
+  border-color: #ff9800;
+}
+
+.container button {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ff9800;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 15px;
+}
+
+.container button:hover {
+  background-color: #e68900;
+  transform: translateY(-2px);
+}
+
+#newDiv {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #fff5e1;
+  color: #000;
+  border: 2px solid #ff9800;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#newDiv h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  border: none;
+  background-color: #ffe4b5;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+}
+
+#newDiv p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  background-color: #d3e0ea;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .city {
+    padding: 5px;
+  }
+  .container button {
+    padding: 8px;
+  }
+  #newDiv {
+    padding: 10px;
+  }
+  #newDiv h2 {
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  #newDiv p {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+}
