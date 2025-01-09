@@ -36,6 +36,11 @@ body {
   gap: 10px;
 }
 
+.container h1 {
+  font-size: 2rem;
+  color: #000;
+}
+
 .city {
   width: 100%;
   padding: 8px 12px;
@@ -103,17 +108,29 @@ body {
   text-align: center;
 }
 
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  cursor: pointer;
+  margin: 5px 0;
+  color: #007bff;
+  text-decoration: underline;
+}
+
 @media (max-width: 480px) {
   body {
-    padding: 5px;
-    min-height: 80vh; 
+    padding: 15px;
   }
 
   .container {
     padding: 10px;
     gap: 8px;
     max-width: 90%;
-    min-height: 60vh; 
+    width: 100%;
+    min-height: 40vh;
   }
 
   .city {
@@ -146,12 +163,12 @@ body {
     margin-bottom: 5px;
   }
 
-  .btn-container {
+  .btn-containar {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
     gap: 10px;
-    font-size: 0.9rem;
+    font-size: 0.09rem;
   }
 }

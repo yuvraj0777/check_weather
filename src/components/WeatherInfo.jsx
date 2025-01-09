@@ -35,7 +35,7 @@ const WeatherInfo = () => {
       const imgData = data.results[0]?.urls.regular || null;
       setBg(imgData);
       if (imgData) {
-        document.body.style.backgroundImage = `url(${imgData})`;
+        // document.body.style.backgroundImage = `url(${imgData})`;
       }
     } catch (err) {
       setError("Failed to load background image.");
@@ -81,12 +81,15 @@ const WeatherInfo = () => {
     }
   };
 
-  const toggleUnit = () => {
-    setUnit((prev) => (prev === "metric" ? "imperial" : "metric"));
-  };
-
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        backgroundImage: bg ? `url(${bg})` : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <h1>Weather App</h1>
       <div>
         <input
@@ -101,10 +104,7 @@ const WeatherInfo = () => {
             {loading ? "Loading..." : "Check Weather"}
           </button>
           <button onClick={getCurrentLocationWeather}>
-            📍 Use Current Location
-          </button>
-          <button onClick={toggleUnit}>
-            Switch to {unit === "metric" ? "Fahrenheit" : "Celsius"}
+            📍Current Location
           </button>
         </div>
       </div>
