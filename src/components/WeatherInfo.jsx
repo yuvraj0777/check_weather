@@ -34,9 +34,6 @@ const WeatherInfo = () => {
       const data = await response.json();
       const imgData = data.results[0]?.urls.regular || null;
       setBg(imgData);
-      if (imgData) {
-        // document.body.style.backgroundImage = `url(${imgData})`;
-      }
     } catch (err) {
       setError("Failed to load background image.");
     }
